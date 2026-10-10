@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use or discuss this project, please cite the repository."
+type: dataset
+title: "China Prefecture-Level Government Work Report Corpus"
+authors:
+  - family-names: "Wang"
+    given-names: "Yuankui"
+version: "1.0.0"
+date-released: "2026-10-10"
+keywords:
+  - China
+  - government work reports
+  - prefecture-level cities
+  - text data
+  - archival recovery
+  - administrative divisions

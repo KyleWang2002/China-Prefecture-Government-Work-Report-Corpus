@@ -1,0 +1,4 @@
+# Install PaddlePaddle separately for your CPU/GPU environment.
+opencv-python>=4.9
+numpy>=1.26
+paddleocr>=2.7
