@@ -11,6 +11,25 @@
 我现在把 **2005–2026 年**作为主体区间。目前总表里有 **295 个城市序列，覆盖中国大陆 31 个省级行政区**，包括四个直辖市。只看 2005–2026 年，目前有 **6,359 个 available city-year**，在各城市已经记录的时间区间内还有 **32 个明确缺口**。但是能往前追的数据在我给的文件里面也有所注明，因为2005-2026确实是缺失最少的，到2003其实也还好，再往前就不只是找不找得到的问题了，市志也几近没有。
 ![逐年覆盖](figures/coverage_by_year.png)
 
+## Author
+
+**Yuankui Wang**
+**Hunan University**
+**Current mail address: yuankuiw@hnu.edu.cn**
+
+
+## 样例结构
+
+<p align="center">
+  <img src="figures/example-city-coverage-inventory.png"
+       alt="Example City Coverage Inventory"
+       width="1050">
+</p>
+
+<p align="center">
+  <em>Figure 2. Example of the city-level coverage inventory.</em>
+</p>
+
 ## 为什么要找政府工作报告？
 
 简单说，市级政府工作报告一般是市长在当地人民代表大会年度会议上作的报告。
@@ -54,20 +73,15 @@
 
 所以我最后做的是 semi-automated。能稳定自动化的就自动化，碰到异常就转人工，而不是强行让所有城市走同一条脚本。
 
-```mermaid
-flowchart LR
-    A[政府官网 / 官方档案] --> B[HTML / PDF / Word / 图片]
-    C[年鉴 / 地方志 / 报纸] --> B
-    B --> D{文档类型}
-    D -->|HTML / 文字PDF| E[直接提取]
-    D -->|扫描 / 复杂排版| F[渲染 + 分栏 OCR]
-    E --> G[清洗]
-    F --> G
-    G --> H[质量检查]
-    H --> I[人工复核]
-    I --> J[最终文本]
-    K[行政区划变更表] --> J
-```
+<p align="center">
+  <img src="figures/gwr-corpus-construction-pipeline.png"
+       alt="Government Work Report Corpus Construction Pipeline"
+       width="950">
+</p>
+
+<p align="center">
+  <em>Figure 1. Government Work Report corpus construction pipeline.</em>
+</p>
 
 具体的方法放在 [`docs/methodology.md`](docs/methodology.md) 和 [`docs/quality_control.md`](docs/quality_control.md)。
 
@@ -79,7 +93,7 @@ flowchart LR
 
 2025 年，有研究者因为网上找不到 2011–2014 年的政府工作报告，直接向来宾市政府申请查询。官方回复说，因为网站系统数据迁移，2014 年及以前的电子版暂时无法提供，2015 年以后可以在现在的门户网站查询。
 
-但这并不代表 2014 年以前的报告真的缺失。
+但这并不代表 2014 年以前的报告真的没有。
 
 我后来从《来宾年鉴》（市志）里把 **2005–2014 年**这一段全部补了回来。
 
@@ -112,6 +126,17 @@ flowchart LR
 而且行政区划尤其是地级市变动，更是代表着国家对该市，乃至一个省的功能定位，总共的64条变化，在一定程度上能解释中国在地级市这个层级的一些战略思考。
 
 ![行政区划变更](figures/administrative_changes_by_year.png)
+
+<p align="center">
+  <img src="figures/example-prefecture-level-administrative-changes.png"
+       alt="Example Prefecture-Level Administrative Changes"
+       width="1050">
+</p>
+
+<p align="center">
+  <em>Figure 3. Example of prefecture-level administrative changes used for city-year reconciliation.</em>
+</p>
+
 
 对应数据在 [`metadata/prefecture_changes_2000_2018.csv`](metadata/prefecture_changes_2000_2018.csv)。
 
@@ -157,6 +182,6 @@ src/review/llm_assisted_review.py
 ## Author
 
 **Yuankui Wang**
-**Hunan University"
-Current mail address: yuankuiw@hnu.edu.cn
-希望在2027fall能去北美读经济学博士
+**Hunan University**
+**Current mail address: yuankuiw@hnu.edu.cn**
+**希望在2027fall能去北美读经济学博士**
