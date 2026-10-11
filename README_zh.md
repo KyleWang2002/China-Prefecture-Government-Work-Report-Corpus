@@ -43,7 +43,7 @@
 ## 样例结构
 
 <p align="center">
-  <img src="figures/城市覆盖清单示例表格.png"
+  <img src="figures/example-city-coverage-inventory.png"
        alt="城市覆盖清单示例"
        width="1050">
 </p>
