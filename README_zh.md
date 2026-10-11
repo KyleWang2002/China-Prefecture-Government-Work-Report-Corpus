@@ -43,7 +43,7 @@
 ## 样例结构
 
 <p align="center">
-  <img src="figures/example-city-coverage-inventory.png"
+  <img src="figures/example-city-coverage-inventory-zh.png"
        alt="城市覆盖清单示例"
        width="1050">
 </p>
@@ -96,7 +96,7 @@
 所以我最后做的是 semi-automated。能稳定自动化的就自动化，碰到异常就转人工，而不是强行让所有城市走同一条脚本。
 
 <p align="center">
-  <img src="figures/政府工作报告语料构建流程.png"
+  <img src="figures/gwr-corpus-construction-pipeline-zh.png"
        alt="政府工作报告语料构建流程"
        width="950">
 </p>
@@ -158,7 +158,7 @@
 </p>
 
 <p align="center">
-  <img src="figures/地级行政区变更信息表.png"
+  <img src="figures/example-prefecture-level-administrative-changes-zh.png"
        alt="地级行政区变更信息表示例"
        width="1050">
 </p>
